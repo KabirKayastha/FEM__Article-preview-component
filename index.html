@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-container card-img-container">
+        <img src="./images/drawers.jpg" alt="drawers" class="card-img" />
+      </div>
+
+      <div class="card-content">
+        <h2 class="card-title">
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home
+        </h2>
+        <p class="card-desc">
+          Ever been in a room and felt like something was missing? Perhaps it
+          felt slightly bare and uninviting. I’ve got some simple tips to help
+          you make any room feel complete.
+        </p>
+
+        <div class="card-footer">
+          <div class="profile-container">
+            <div class="avatar img-container">
+              <img
+                src="./images/avatar-michelle.jpg"
+                alt="avatar"
+                class="avatar-img"
+              />
+            </div>
+            <div class="avatar-info">
+              <p class="name">Michelle Appleton</p>
+              <p class="date">28 Jun 2020</p>
+            </div>
+          </div>
+
+          <div class="share-container">
+            <button type="button" class="share-icon">
+              <ion-icon name="arrow-redo-sharp"></ion-icon>
+            </button>
+
+            <ul class="socials-shares fade-out">
+              <li class="index">SHARE</li>
+              <li class="icon">
+                <a href="#">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+              <li class="icon">
+                <a href="#">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+              <li class="icon">
+                <a href="#">
+                  <ion-icon name="logo-pinterest"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script>
+      let shareBtn = document.querySelector(".share-icon");
+      let shareBox = document.querySelector(".socials-shares");
+
+      shareBtn.addEventListener("click", function () {
+        this.classList.toggle("active");
+        shareBox.classList.toggle("open");
+        shareBox.classList.toggle("fade-out");
+      });
+    </script>
+  </body>
+</html>
